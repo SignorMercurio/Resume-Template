@@ -25,4 +25,7 @@ quasar dev
 
 If not, you may change `pages/Index.vue` and `layouts/MainLayout.vue` yourself.
 
-To change the theme color, check out `css/quasar.variable.sass`.
+## Notes
+
+- To change the theme color, check out `css/quasar.variable.sass`.
+- Check out the example PDF generated under `static`.
