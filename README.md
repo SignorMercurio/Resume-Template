@@ -2,9 +2,9 @@
 
 My personal resume template.
 
-![Resume Template Demo](static/Template.jpg)
-
 ![Resume Template Grey Theme Demo](static/TemplateGrey.jpg)
+
+![Resume Template Demo](static/Template.jpg)
 
 ## Install the dependencies
 
@@ -31,7 +31,7 @@ If not, you may change `pages/Index.vue` and `layouts/MainLayout.vue` yourself.
 
 To change the color theme, you only need to change four main colors.
 
-In you `config.ts`, add the following configurations:
+In your `config.ts`, add the following configurations:
 
 ```ts
 import { setCssVar } from 'quasar'
