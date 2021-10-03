@@ -7,7 +7,7 @@
       elevated
     >
       <q-list class="text-white">
-        <q-item-label header class="text-white text-bold text-h6">
+        <q-item-label header class="text-white text-bold text-h6 text-center">
           个人信息
         </q-item-label>
         <q-item>
@@ -54,7 +54,7 @@
           </q-item-section>
         </q-item>
 
-        <q-item-label header class="text-white text-bold text-h6">
+        <q-item-label header class="text-white text-bold text-h6 text-center">
           技能
         </q-item-label>
         <q-item v-for="(item, index) in Skills" :key="index">
@@ -66,7 +66,7 @@
           </q-item-section>
         </q-item>
 
-        <q-item-label header class="text-white text-bold text-h6">
+        <q-item-label header class="text-white text-bold text-h6 text-center">
           其他经历
         </q-item-label>
         <q-card

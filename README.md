@@ -2,8 +2,6 @@
 
 My personal resume template.
 
-![Resume Template Grey Theme Demo](static/TemplateGrey.jpg)
-
 ![Resume Template Demo](static/Template.jpg)
 
 ## Install the dependencies
@@ -36,10 +34,10 @@ In your `config.ts`, add the following configurations:
 ```ts
 import { setCssVar } from 'quasar'
 
-setCssVar('primary', '#616161')
-setCssVar('secondary', '#e0e0e0')
-setCssVar('info', '#eeeeee')
-setCssVar('dark', '#424242')
+setCssVar('primary', '#43a047')
+setCssVar('secondary', '#c8e6c9')
+setCssVar('info', '#e8f5e9')
+setCssVar('dark', '#388e3c')
 ```
 
-And you'll be using the grey color theme.
+And you'll be using the green color theme.

@@ -2,7 +2,10 @@
   <q-page class="q-pa-lg">
     <div class="row justify-between">
       <div>
-        <div class="text-h6 text-primary">教育</div>
+        <div class="text-h6 text-primary">
+          <q-icon name="fas fa-graduation-cap" left />
+          <span>教育</span>
+        </div>
         <q-timeline color="primary">
           <q-timeline-entry
             v-for="(item, index) in Edus"
@@ -14,15 +17,18 @@
                 <div>
                   <a :href="item.link" class="text-dark">{{ item.school }}</a>
                 </div>
-                <q-badge :label="item.major" color="primary" />
-                <q-badge :label="item.degree" color="dark" />
+                <q-badge outline :label="item.major" color="dark" />
+                <q-badge outline :label="item.degree" color="dark" />
               </div>
             </template>
           </q-timeline-entry>
         </q-timeline>
       </div>
       <div>
-        <div class="text-h6 text-primary">{{ WorkType }}</div>
+        <div class="text-h6 text-primary">
+          <q-icon name="fas fa-briefcase" left />
+          <span>{{ WorkType }}</span>
+        </div>
         <q-timeline color="primary">
           <q-timeline-entry
             v-for="(item, index) in Works"
@@ -32,7 +38,7 @@
             <template v-slot:title>
               <div class="row q-gutter-x-sm text-subtitle1">
                 <a :href="item.link" class="text-dark">{{ item.company }}</a>
-                <q-badge :label="item.work" color="primary" />
+                <q-badge outline :label="item.work" color="dark" />
               </div>
             </template>
           </q-timeline-entry>
@@ -42,7 +48,10 @@
 
     <div class="row justify-between">
       <div class="col-auto">
-        <div class="text-h6 text-primary">荣誉</div>
+        <div class="text-h6 text-primary">
+          <q-icon name="fas fa-trophy" left />
+          <span>荣誉</span>
+        </div>
         <q-timeline color="primary">
           <q-timeline-entry
             v-for="(item, index) in Awards"
@@ -52,8 +61,13 @@
             <template v-slot:title>
               <div class="row q-gutter-x-sm text-subtitle1">
                 <div>{{ item.competition }}</div>
-                <q-badge :label="item.award" color="primary" />
-                <q-badge v-if="item.extra" :label="item.extra" color="dark" />
+                <q-badge outline :label="item.award" color="dark" />
+                <q-badge
+                  outline
+                  v-if="item.extra"
+                  :label="item.extra"
+                  color="dark"
+                />
               </div>
             </template>
           </q-timeline-entry>
@@ -61,7 +75,10 @@
       </div>
 
       <div class="col q-ml-xs">
-        <div class="text-h6 text-primary">参与开源</div>
+        <div class="text-h6 text-primary">
+          <q-icon name="fas fa-code-branch" left />
+          <span>参与开源</span>
+        </div>
         <div class="q-mt-sm">
           <q-card
             flat
@@ -88,7 +105,10 @@
       </div>
     </div>
 
-    <div class="text-h6 text-primary">项目</div>
+    <div class="text-h6 text-primary">
+      <q-icon name="fas fa-code" left />
+      <span>项目</span>
+    </div>
     <q-markup-table flat dense class="q-mt-md bg-info">
       <thead class="text-bold">
         <tr>
@@ -102,10 +122,21 @@
           <td>{{ item.name }}</td>
           <td>
             {{ item.desc }}
-            <q-badge v-if="item.badge" :label="item.badge" color="primary" />
+            <q-badge
+              outline
+              v-if="item.badge"
+              :label="item.badge"
+              color="dark"
+            />
           </td>
           <td class="q-gutter-x-xs">
-            <q-badge v-for="t in item.tech" :key="t" :label="t" color="dark" />
+            <q-badge
+              outline
+              v-for="t in item.tech"
+              :key="t"
+              :label="t"
+              color="dark"
+            />
           </td>
         </tr>
       </tbody>

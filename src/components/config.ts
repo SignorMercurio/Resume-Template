@@ -1,10 +1,10 @@
 import { ref } from 'vue'
 import { setCssVar } from 'quasar'
 
-setCssVar('primary', '#43a047')
-setCssVar('secondary', '#c8e6c9')
-setCssVar('info', '#e8f5e9')
-setCssVar('dark', '#388e3c')
+setCssVar('primary', '#616161')
+setCssVar('secondary', '#e0e0e0')
+setCssVar('info', '#eeeeee')
+setCssVar('dark', '#424242')
 
 const Info = ref({
   name: 'John Doe',
