@@ -1,4 +1,4 @@
-# Resume Template
+# Resume-Template
 
 My personal resume template.
 
@@ -25,7 +25,19 @@ quasar dev
 
 If not, you may change `pages/Index.vue` and `layouts/MainLayout.vue` yourself.
 
-## Notes
+## Change the color theme
 
-- To change the theme color, check out `css/quasar.variable.sass`.
-- Check out the example PDF generated under `static`.
+To change the color theme, you only need to change four main colors.
+
+In you `config.ts`, add the following configurations:
+
+```ts
+import { setCssVar } from 'quasar'
+
+setCssVar('primary', '#616161')
+setCssVar('secondary', '#e0e0e0')
+setCssVar('info', '#eeeeee')
+setCssVar('dark', '#424242')
+```
+
+And you'll be using the grey color theme.

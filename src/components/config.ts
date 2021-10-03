@@ -1,4 +1,10 @@
 import { ref } from 'vue'
+import { setCssVar } from 'quasar'
+
+setCssVar('primary', '#43a047')
+setCssVar('secondary', '#c8e6c9')
+setCssVar('info', '#e8f5e9')
+setCssVar('dark', '#388e3c')
 
 const Info = ref({
   name: 'John Doe',
@@ -181,14 +187,14 @@ const Projects = ref([
   {
     name: 'scelerisque viverra',
     desc: 'massa ut viverra',
-    business: true,
     tech: ['Vue.js'],
+    badge: '商用',
   },
   {
     name: 'pellentesque vel',
     desc: 'Morbi accumsan sapien',
-    school: true,
     tech: ['Python'],
+    badge: '高校使用',
   },
   {
     name: 'quis rhoncus',
@@ -198,26 +204,26 @@ const Projects = ref([
   {
     name: 'tempus arcu',
     desc: 'eu varius ligula',
-    business: true,
     tech: ['C++'],
+    badge: '商用',
   },
   {
     name: 'ligula vel eros',
     desc: 'Suspendisse quis nunc mollis',
-    business: true,
     tech: ['Shell'],
+    badge: '商用',
   },
   {
     name: 'aliquam elit ac',
     desc: 'placerat nibh',
-    business: true,
     tech: ['Node.js', 'Java'],
+    badge: '商用',
   },
   {
     name: 'Nam feugiat',
     desc: 'mattis nisi in pellentesque',
-    school: true,
     tech: ['Ruby'],
+    badge: '高校使用',
   },
   {
     name: 'enim scelerisque',

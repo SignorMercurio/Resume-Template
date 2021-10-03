@@ -73,7 +73,7 @@
           flat
           v-for="(item, index) in Misc"
           :key="index"
-          class="bg-green q-ma-md"
+          class="bg-dark q-ma-md"
         >
           <q-card-section class="row justify-between items-center">
             <div>{{ item }}</div>
