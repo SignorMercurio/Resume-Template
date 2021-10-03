@@ -4,6 +4,8 @@ My personal resume template.
 
 ![Resume Template Demo](static/Template.jpg)
 
+![Resume Template Grey Theme Demo](static/TemplateGrey.jpg)
+
 ## Install the dependencies
 
 Simply run `yarn` or `npm i`.
