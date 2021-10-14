@@ -4,7 +4,7 @@
       <div>
         <div class="text-h6 text-primary">
           <q-icon name="fas fa-graduation-cap" left />
-          <span>教育</span>
+          <span>教育 / Education </span>
         </div>
         <q-timeline color="primary">
           <q-timeline-entry
@@ -50,7 +50,7 @@
       <div class="col-auto">
         <div class="text-h6 text-primary">
           <q-icon name="fas fa-trophy" left />
-          <span>荣誉</span>
+          <span>荣誉 / Awards </span>
         </div>
         <q-timeline color="primary">
           <q-timeline-entry
@@ -77,7 +77,7 @@
       <div class="col q-ml-xs">
         <div class="text-h6 text-primary">
           <q-icon name="fas fa-code-branch" left />
-          <span>参与开源</span>
+          <span>参与开源 / Open Source Contributions </span>
         </div>
         <div class="q-mt-sm">
           <q-card
@@ -107,7 +107,7 @@
 
     <div class="text-h6 text-primary">
       <q-icon name="fas fa-code" left />
-      <span>项目</span>
+      <span>项目 / Projects </span>
     </div>
     <q-markup-table flat dense class="q-mt-md bg-info">
       <thead class="text-bold">
@@ -119,7 +119,10 @@
       </thead>
       <tbody>
         <tr v-for="(item, index) in Projects" :key="index">
-          <td>{{ item.name }}</td>
+          <td v-if="item.url">
+            <a :href="item.url" class="text-dark">{{ item.name }}</a>
+          </td>
+          <td v-else>{{ item.name }}</td>
           <td>
             {{ item.desc }}
             <q-badge

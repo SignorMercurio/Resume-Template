@@ -84,7 +84,7 @@ const Edus = ref([
   },
 ])
 
-const WorkType = '实习'
+const WorkType = '实习 / Internship'
 
 const Works = ref([
   {
@@ -189,6 +189,7 @@ const Projects = ref([
     desc: 'massa ut viverra',
     tech: ['Vue.js'],
     badge: '商用',
+    url: 'https://example.com',
   },
   {
     name: 'pellentesque vel',
