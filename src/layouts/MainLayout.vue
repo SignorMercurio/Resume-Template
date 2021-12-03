@@ -5,10 +5,11 @@
       behavior="desktop"
       v-model="leftDrawerOpen"
       elevated
+      :width="360"
     >
       <q-list class="text-white">
         <q-item-label header class="text-white text-bold text-h6 text-center">
-          个人信息 / Info
+          {{ Info.title }}
         </q-item-label>
         <q-item>
           <q-item-section side>
@@ -55,9 +56,9 @@
         </q-item>
 
         <q-item-label header class="text-white text-bold text-h6 text-center">
-          技能 / Skills
+          {{ Skills.title }}
         </q-item-label>
-        <q-item v-for="(item, index) in Skills" :key="index">
+        <q-item v-for="(item, index) in Skills.skills" :key="index">
           <q-item-section>
             <q-item-label>{{ item.label }}</q-item-label>
             <q-item-label>
@@ -67,11 +68,11 @@
         </q-item>
 
         <q-item-label header class="text-white text-bold text-h6 text-center">
-          其他经历 / Misc
+          {{ Misc.title }}
         </q-item-label>
         <q-card
           flat
-          v-for="(item, index) in Misc"
+          v-for="(item, index) in Misc.misc"
           :key="index"
           class="bg-dark q-ma-md"
         >
@@ -91,7 +92,7 @@
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue'
-import { Info, Skills, Misc } from 'components/config'
+import { Info, Skills, Misc } from 'src/components/config'
 
 export default defineComponent({
   name: 'MainLayout',

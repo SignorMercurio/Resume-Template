@@ -4,21 +4,21 @@
       <div>
         <div class="text-h6 text-primary">
           <q-icon name="fas fa-graduation-cap" left />
-          <span>教育 / Education </span>
+          <span>{{ Edus.title }} </span>
         </div>
         <q-timeline color="primary">
           <q-timeline-entry
-            v-for="(item, index) in Edus"
+            v-for="(item, index) in Edus.edus"
             :key="index"
             :subtitle="item.time"
           >
             <template v-slot:title>
-              <div class="row q-gutter-x-sm text-subtitle1">
-                <div>
-                  <a :href="item.link" class="text-dark">{{ item.school }}</a>
+              <div class="text-subtitle1">
+                <a :href="item.link" class="text-dark">{{ item.school }}</a>
+                <div class="row q-gutter-x-md">
+                  <span>{{ item.major }}</span>
+                  <q-badge outline :label="item.degree" color="dark" />
                 </div>
-                <q-badge outline :label="item.major" color="dark" />
-                <q-badge outline :label="item.degree" color="dark" />
               </div>
             </template>
           </q-timeline-entry>
@@ -27,11 +27,11 @@
       <div>
         <div class="text-h6 text-primary">
           <q-icon name="fas fa-briefcase" left />
-          <span>{{ WorkType }}</span>
+          <span>{{ Works.title }}</span>
         </div>
         <q-timeline color="primary">
           <q-timeline-entry
-            v-for="(item, index) in Works"
+            v-for="(item, index) in Works.works"
             :key="index"
             :subtitle="item.time"
           >
@@ -50,17 +50,22 @@
       <div class="col-auto">
         <div class="text-h6 text-primary">
           <q-icon name="fas fa-trophy" left />
-          <span>荣誉 / Awards </span>
+          <span>{{ Awards.title }} </span>
         </div>
         <q-timeline color="primary">
           <q-timeline-entry
-            v-for="(item, index) in Awards"
+            v-for="(item, index) in Awards.awards"
             :key="index"
             :subtitle="item.time"
           >
             <template v-slot:title>
-              <div class="row q-gutter-x-sm text-subtitle1">
-                <div>{{ item.competition }}</div>
+              <div
+                class="row q-gutter-x-sm text-subtitle1 text-wrap"
+                :style="Awards.style"
+              >
+                <div>
+                  {{ item.competition }}
+                </div>
                 <q-badge outline :label="item.award" color="dark" />
                 <q-badge
                   outline
@@ -77,12 +82,12 @@
       <div class="col q-ml-xs">
         <div class="text-h6 text-primary">
           <q-icon name="fas fa-code-branch" left />
-          <span>参与开源 / Open Source Contributions </span>
+          <span>{{ OpenSrc.title }}</span>
         </div>
         <div class="q-mt-sm">
           <q-card
             flat
-            v-for="(item, index) in OpenSrc"
+            v-for="(item, index) in OpenSrc.openSrc"
             :key="index"
             class="q-my-sm bg-info"
           >
@@ -107,18 +112,22 @@
 
     <div class="text-h6 text-primary">
       <q-icon name="fas fa-code" left />
-      <span>项目 / Projects </span>
+      <span>{{ Projects.title }}</span>
     </div>
     <q-markup-table flat dense class="q-mt-md bg-info">
       <thead class="text-bold">
         <tr>
-          <th class="text-left text-subtitle2">名称</th>
-          <th class="text-left text-subtitle2">简介</th>
-          <th class="text-left text-subtitle2">技术</th>
+          <th
+            class="text-left text-subtitle2"
+            v-for="header in Projects.header"
+            :key="header"
+          >
+            {{ header }}
+          </th>
         </tr>
       </thead>
       <tbody>
-        <tr v-for="(item, index) in Projects" :key="index">
+        <tr v-for="(item, index) in Projects.projects" :key="index">
           <td v-if="item.url">
             <a :href="item.url" class="text-dark">{{ item.name }}</a>
           </td>
@@ -149,21 +158,13 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import {
-  Edus,
-  Works,
-  WorkType,
-  Awards,
-  OpenSrc,
-  Projects,
-} from 'components/config'
+import { Edus, Works, Awards, OpenSrc, Projects } from 'src/components/config'
 
 export default defineComponent({
   name: 'PageIndex',
   setup() {
     return {
       Edus,
-      WorkType,
       Works,
       Awards,
       OpenSrc,
