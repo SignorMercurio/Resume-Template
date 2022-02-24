@@ -15,44 +15,62 @@ const Info = ref({
   blog: 'https://example.com',
 })
 
+const JobIntention = ref({
+  title: 'Job Intention',
+  jobs: [
+    {
+      icon: 'fas fa-user-cog',
+      name: 'IT Developer',
+    },
+  ],
+})
+
 const Skills = ref({
   title: 'Skills',
   skills: [
     {
       label: 'Go',
-      value: 95,
-    },
-    {
-      label: 'HTML / CSS / Javascript',
       value: 90,
-    },
-    {
-      label: 'Typescript',
-      value: 75,
     },
     {
       label: 'Vue.js',
       value: 90,
     },
     {
+      label: 'HTML / CSS / Javascript',
+      value: 90,
+    },
+    {
       label: 'Python',
+      value: 85,
+    },
+    {
+      label: 'Docker',
+      value: 85,
+    },
+    {
+      label: 'Kubernetes',
       value: 80,
     },
     {
-      label: 'C',
-      value: 85,
+      label: 'C / C++',
+      value: 80,
+    },
+    {
+      label: 'Shell',
+      value: 75,
+    },
+    {
+      label: 'Typescript',
+      value: 75,
+    },
+    {
+      label: 'Assembly',
+      value: 70,
     },
     {
       label: 'SQL',
       value: 70,
-    },
-    {
-      label: 'Docker',
-      value: 80,
-    },
-    {
-      label: 'Kubernetes',
-      value: 90,
     },
   ],
 })
@@ -69,7 +87,6 @@ const Misc = ref({
     'dui mattis sit amet',
     'Praesent ornare',
     'felis nulla',
-    'non venenatis',
   ],
 })
 
@@ -103,7 +120,7 @@ const Works = ref({
       link: 'https://example.com',
     },
     {
-      company: 'Consectetur adipiscing elit',
+      company: 'Consectetur adipiscing elit Nulla ut nisl ac sapien',
       time: '2001.01 - 2001.07',
       work: 'Researcher',
       link: 'https://example.com',
@@ -113,7 +130,7 @@ const Works = ref({
 
 const Awards = ref({
   title: 'Awards',
-  style: 'max-width: 580px',
+  header: ['Year', 'Competition Name', 'Prize'],
   awards: [
     {
       competition: 'Praesent ornare felis nulla',
@@ -138,14 +155,12 @@ const Awards = ref({
     {
       competition: 'commodo, auctor nunc nec',
       time: '2019',
-      award: 'arcu In ac',
-      extra: 'a justo',
+      award: 'arcu In ac, a justo',
     },
     {
       competition: 'vestibulum Quisque lacus',
       time: '2019',
-      award: 'facilisis et',
-      extra: 'tincidunt sit',
+      award: 'facilisis et, tincidunt sit',
     },
     {
       competition: 'Ut gravida rutrum nisi',
@@ -155,8 +170,7 @@ const Awards = ref({
     {
       competition: 'Praesent ultricies nulla',
       time: '2020',
-      award: 'et semper',
-      extra: 'auctor eget',
+      award: 'et semper, auctor eget',
     },
     {
       competition: 'Nunc et porta nunc',
@@ -187,7 +201,6 @@ const OpenSrc = ref({
 
 const Projects = ref({
   title: 'Projects',
-  header: ['Name', 'Description', 'Technologies'],
   projects: [
     {
       name: 'Curabitur',
@@ -205,23 +218,31 @@ const Projects = ref({
       tech: ['Vue.js'],
       badge: 'Commercial use',
       url: 'https://example.com',
+      detail:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ut nisl ac sapien elementum posuere.',
     },
     {
       name: 'pellentesque vel',
       desc: 'Morbi accumsan sapien',
       tech: ['Python'],
       badge: 'University use',
+      detail:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ut nisl ac sapien elementum posuere.',
     },
     {
       name: 'quis rhoncus',
       desc: 'viverra orci magna',
       tech: ['Go'],
+      detail:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ut nisl ac sapien elementum posuere.',
     },
     {
       name: 'tempus arcu',
       desc: 'eu varius ligula',
       tech: ['C++'],
       badge: 'Commercial use',
+      detail:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ut nisl ac sapien elementum posuere.',
     },
     {
       name: 'ligula vel eros',
@@ -234,12 +255,16 @@ const Projects = ref({
       desc: 'placerat nibh',
       tech: ['Node.js', 'Java'],
       badge: 'Commercial use',
+      detail:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ut nisl ac sapien elementum posuere.',
     },
     {
       name: 'Nam feugiat',
       desc: 'mattis nisi in pellentesque',
       tech: ['Ruby'],
       badge: 'University use',
+      detail:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ut nisl ac sapien elementum posuere.',
     },
     {
       name: 'enim scelerisque',
@@ -255,18 +280,35 @@ const Projects = ref({
       name: 'mauris pretium et',
       desc: 'Fusce a aliquet metus Fusce convallis tortor',
       tech: ['Haskell'],
+      badge: 'Production-ready',
+      detail:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ut nisl ac sapien elementum posuere.',
     },
     {
       name: 'nec velit tincidunt',
       desc: 'ut congue nibh accumsan',
       tech: ['PHP'],
+      badge: 'Production-ready',
+      detail:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ut nisl ac sapien elementum posuere.',
     },
     {
       name: 'Quisque pellentesque',
       desc: 'mollis lorem at pulvinar mi mattis',
       tech: ['Lisp'],
+      url: 'https://www.example.com',
     },
   ],
 })
 
-export { Info, Skills, Misc, Edus, Works, Awards, OpenSrc, Projects }
+export {
+  Info,
+  JobIntention,
+  Skills,
+  Misc,
+  Edus,
+  Works,
+  Awards,
+  OpenSrc,
+  Projects,
+}

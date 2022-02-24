@@ -5,7 +5,7 @@
       behavior="desktop"
       v-model="leftDrawerOpen"
       elevated
-      :width="360"
+      :width="300"
     >
       <q-list class="text-white">
         <q-item-label header class="text-white text-bold text-h6 text-center">
@@ -56,13 +56,28 @@
         </q-item>
 
         <q-item-label header class="text-white text-bold text-h6 text-center">
+          {{ JobIntention.title }}
+        </q-item-label>
+        <q-item v-for="(item, index) in JobIntention.jobs" :key="index">
+          <q-item-section side>
+            <q-icon :name="item.icon" color="white" />
+          </q-item-section>
+          <q-item-section> {{ item.name }} </q-item-section>
+        </q-item>
+
+        <q-item-label header class="text-white text-bold text-h6 text-center">
           {{ Skills.title }}
         </q-item-label>
-        <q-item v-for="(item, index) in Skills.skills" :key="index">
+        <q-item v-for="(item, index) in Skills.skills" :key="-index">
           <q-item-section>
             <q-item-label>{{ item.label }}</q-item-label>
             <q-item-label>
-              <q-slider readonly :model-value="item.value" color="white" />
+              <!-- <q-slider readonly :model-value="item.value" color="white" /> -->
+              <q-linear-progress
+                color="info"
+                rounded
+                :value="item.value / 100"
+              ></q-linear-progress>
             </q-item-label>
           </q-item-section>
         </q-item>
@@ -92,7 +107,7 @@
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue'
-import { Info, Skills, Misc } from 'src/components/config'
+import { Info, JobIntention, Skills, Misc } from 'src/components/config'
 
 export default defineComponent({
   name: 'MainLayout',
@@ -102,6 +117,7 @@ export default defineComponent({
     return {
       leftDrawerOpen,
       Info,
+      JobIntention,
       Skills,
       Misc,
     }
