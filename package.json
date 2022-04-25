@@ -7,12 +7,14 @@
   "private": true,
   "scripts": {
     "lint": "eslint --ext .js,.ts,.vue ./",
-    "test": "echo \"No test specified\" && exit 0"
+    "test": "echo \"No test specified\" && exit 0",
+    "web:dev": "quasar dev"
   },
   "dependencies": {
     "@quasar/extras": "^1.13.5",
     "autoprefixer": "^10.4.5",
     "core-js": "^3.6.5",
+    "puppeteer": "^13.6.0",
     "quasar": "^2.6.6",
     "vue": "^3.0.0",
     "vue-i18n": "^9.2.0-beta.35",

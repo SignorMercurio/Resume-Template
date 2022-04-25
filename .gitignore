@@ -34,5 +34,4 @@ yarn-error.log*
 
 .vscode
 .editorconfig
-config.self.*
-src/i18n/zh-CN/index.ts
+*.self.ts

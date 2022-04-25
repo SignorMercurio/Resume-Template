@@ -104,6 +104,7 @@
     <q-page-container class="bg-secondary">
       <router-view />
       <q-btn
+        :ripple="false"
         flat
         :label="locale == 'en-US' ? 'English' : '简体中文'"
         icon="fas fa-language"
@@ -118,7 +119,7 @@
 <script lang="ts">
 import { defineComponent, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
-import configDrawer from 'components/config.self'
+import configDrawer from 'components/config'
 
 export default defineComponent({
   name: 'MainLayout',

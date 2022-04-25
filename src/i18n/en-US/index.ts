@@ -1,3 +1,3 @@
-import config from 'src/components/config.self'
+import config from 'src/components/config'
 
 export default config

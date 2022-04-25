@@ -26,7 +26,7 @@
                       color="dark"
                     />
                   </div>
-                  <div class="text-subtitle2 text-grey-7">
+                  <div v-if="item.extra" class="text-subtitle2 text-grey-7">
                     {{ t(`edu.list[${i}].extra`) }}
                   </div>
                 </div>
@@ -175,7 +175,7 @@
 <script lang="ts">
 import { defineComponent, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
-import configIndex from 'src/components/config.self'
+import configIndex from 'src/components/config'
 
 export default defineComponent({
   name: 'PageIndex',
