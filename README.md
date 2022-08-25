@@ -23,8 +23,9 @@ $ quasar dev
 
 ## Build your own resume
 
-1. Modify `src/components/config.ts`
-2. If you would like to translate the resume to another language, e.g. zh-CN, you need to modify `src/i18n/zh-CN/index.ts` as well.
+1. Copy `src/components/config.ts` to `src/components/config.self.ts` and modify it.
+2. If you would like to translate the resume to another language, e.g. zh-CN, you need to copy `src/i18n/zh-CN/index.ts` to `src/i18n/zh-CN/index.self.ts` and modify it as well.
+3. The Job Intention part in `layouts/MainLayout.vue` is commented. Feel free to uncomment it if needed.
 
 ### Using the template for the first time
 

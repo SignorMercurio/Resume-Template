@@ -75,14 +75,19 @@
             class="q-my-sm bg-info"
           >
             <a
-              :href="`https://github.com/${item}`"
+              :href="`https://github.com/${item.name}`"
               style="text-decoration: none"
               class="text-dark"
             >
               <q-card-section class="row justify-between">
-                <div>{{ item }}</div>
+                <div class="q-gutter-x-xs">
+                  <span>{{ item.name }}</span>
+                  <q-badge v-for="type in item.contrib" :key="type">{{
+                    type
+                  }}</q-badge>
+                </div>
                 <img
-                  :src="`https://img.shields.io/github/stars/${item}?style=social`"
+                  :src="`https://img.shields.io/github/stars/${item.name}?style=social`"
                   alt="GitHub Repo stars"
                 />
               </q-card-section>
@@ -175,7 +180,7 @@
 <script lang="ts">
 import { defineComponent, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
-import configIndex from 'src/components/config'
+import configIndex from 'src/components/config.self'
 
 export default defineComponent({
   name: 'PageIndex',

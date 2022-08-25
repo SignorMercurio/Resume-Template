@@ -55,7 +55,7 @@
           </q-item-section>
         </q-item>
 
-        <q-item-label header class="text-white text-bold text-h6 text-center">
+        <!-- <q-item-label header class="text-white text-bold text-h6 text-center">
           {{ t('job_intention.title') }}
         </q-item-label>
         <q-item v-for="(item, i) in JobIntention.list" :key="i">
@@ -65,7 +65,7 @@
           <q-item-section>
             {{ t(`job_intention.list[${i}].name`) }}
           </q-item-section>
-        </q-item>
+        </q-item> -->
 
         <q-item-label header class="text-white text-bold text-h6 text-center">
           {{ t('skills.title') }}
@@ -119,7 +119,7 @@
 <script lang="ts">
 import { defineComponent, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
-import configDrawer from 'components/config'
+import configDrawer from 'components/config.self'
 
 export default defineComponent({
   name: 'MainLayout',

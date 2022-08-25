@@ -5,7 +5,7 @@ const zh = `${base_path}/zh.pdf`
 const url = 'http://localhost:8080'
 const pdfConfig = {
   format: 'a4',
-  scale: 0.65,
+  scale: 0.59,
   pageRanges: '1',
   printBackground: true,
 }
